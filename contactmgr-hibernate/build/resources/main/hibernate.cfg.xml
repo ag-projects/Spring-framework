@@ -1,0 +1,23 @@
+<hibernate-configuration>
+
+
+    <session-factory>
+
+        <!--  DB connection settings -->
+        <property name="connection.driver_class">org.h2.Driver</property>
+        <property name="connection.url">jdbc:h2:./data/contactmgr</property>
+
+        <!--  SQL dilect -->
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!-- Create the db scheme on application startup-->
+        <property name="hbm2ddl.auto">create</property>
+
+        <!-- Show the queries prepared by hibernate -->
+        <property name="show_sql">true</property>
+
+        <!-- Name the annotade entity classes-->
+        <mapping class="com.agharibi.concatmgr.model.Contact" />
+
+    </session-factory>
+</hibernate-configuration>
